@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TO DO List</title>
+        <link rel="stylesheet" href="jquery.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="jquery6.js"></script>    
+    <script>
+            $(document).ready(function(){
+                $("#projects").tabs();
+                $("ul").sortable({axis:"x", containment:"#projects"});
+                $("ol").sortable({axis:"y", containment:"#projects"});
+            });
+        </script>
+    </head>
+    <body>
+        <div id="container">
+            <h2>TO DO list</h2>
+            <div id="projects">
+                <ul id="main">
+                    <li><a href="#personal">Personal</a></li>
+                    <li><a href="#work">Work</a></li>
+                </ul>
+                <ol id="personal">
+                    <li><input type="checkbox">Doctor Appointment</li>
+                    <li><input type="checkbox">Call the plumber</li>
+                </ol>
+                <ol id="work">
+                    <li><input type="checkbox">Complete test case document</li>
+                    <li><input type="checkbox">Meet project manager</li>
+                    <li><input type="checkbox">Record</li>
+                </ol>
+           
+            </div>
+        </div>
+    </body>
+</html>
